@@ -1,0 +1,29 @@
+{
+    "setupFiles": [
+      "jest-canvas-mock",
+      "<rootDir>/throwOnConsoleError.js",
+      "<rootDir>/windowMock.js"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/reactTestingLibrary.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|geojson)$": "<rootDir>/fileMock.js",
+      "imports-loader?.*": "<rootDir>/jest/es5modules.js",
+      "worker-loader?.*": "<rootDir>/es5modules.js"
+    },
+    "roots": [
+      "<rootDir>../src"
+    ],
+    "globals": {},
+    "testURL": "https://www.twig-middle-school-interactives.com",
+    "reporters": [
+      "default",
+      [
+        "jest-junit",
+        {
+          "output": "reports/junit.xml"
+        }
+      ]
+    ]
+  }
